@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="header-content" id="home">
+            <h1>Yogesh Selvam</h1>
+            <p>Mobile Solutions Developer</p>
+            <div class="profile">
+                <p>Kitchener, ON</p>
+                <p>Email: <a href="mailto:yogeshcn28@gmail.com">yogeshcn28@gmail.com</a></p>
+                <p>Phone: <a href="tel:+14375666376">+1(437)566-6376</a></p>
+            </div>
+            <a id="download-resume" href="Yogesh_Selvam_Co-op_Resume.pdf" download>
+                <i class="fas fa-download"></i> Download Resume
+            </a>
+            <button id="theme-toggle" aria-label="Toggle Dark Mode">
+                <i class="fas fa-sun" id="icon-light"></i>
+                <i class="fas fa-moon" id="icon-dark"></i>
+            </button>
+        </div>
+    </header>
+
+    <div class="sidebar">
+        <img src="main .jpg" alt="Profile Picture" class="sidebar-profile-pic">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <!-- About Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am pursuing my Post Graduate Diploma in Mobile Solution Development at Conestoga College, Canada. With
+                2.8 years of experience in team management, I specialize in developing mobile solutions and optimizing
+                app performance.</p>
+        </section>
+
+        <!-- Portfolio Section -->
+        <section id="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-gallery">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Mobile Banking Application </h3>
+                        <p>User Interface Design: Designed an intuitive, user-friendly interface using Adobe XD,
+                            ensuring a seamless experience for customers performing banking transactions on their mobile
+                            devices.</p>
+                        <p>Responsive Design: Developed layouts that adapt to various screen sizes and resolutions,
+                            enhancing accessibility and usability across devices.</p>
+
+                        <a href="https://xd.adobe.com/view/0f4f8d87-07bb-4165-ada1-732d142a46c1-5a1c/?fullscreen"  target="_blank" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>E-Kart Protype</h3>
+                        <p>A visually dynamic landing page showcasing a rotating carousel of featured artworks and exhibitions.</p>
+                        <p> Online store for purchasing prints, merchandise, or tickets for exhibitions and events.</p>
+                        <a href="https://xd.adobe.com/view/4db267ba-4052-4789-a614-82a7838d02dd-18e1/?fullscreen"  target="_blank" class="btn">View Project</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Art Gallery Protype</h3>
+                        <p>A dynamic landing page showcasing trending products, seasonal offers, and personalized recommendations.
+                           </p>
+                        <p> Quick access to categories through a prominently displayed menu or visually appealing tiles.</p>
+                        <a href="https://xd.adobe.com/view/11b52f72-62e9-44ba-8264-afcb10c6ab07-44e6/?fullscreen"  target="_blank" class="btn">View Project</a>
+                    </div>
+                </div>
+            
+
+
+            </div>
+        </section>
+
+    <!-- Work Experience Section -->
+<section id="experience">
+    <h2>Work Experience</h2>
+    <div class="timeline">
+         <!-- Technical Manager -->
+         <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Technical Manager</h3>
+                <p>Sanum Sanguineas Solutions Pvt. Ltd., Chennai, India (Aug. 2022 - Apr. 2024)</p>
+                <ul>
+                    <li>Managed day-to-day technical operations, including organizing inventories and ensuring timely delivery of supplies.</li>
+                    <li>Developed and optimized SQL databases for performance and integrity.</li>
+                    <li>Trained team members on effective inventory management practices.</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Junior Engineer -->
+        <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+                <h3>Junior Engineer</h3>
+                <p>Sanum Sanguineas Solutions Pvt. Ltd., Chennai, India (Aug. 2021 - Jul. 2022)</p>
+                <ul>
+                    <li>Assisted in the installation and maintenance of technical equipment.</li>
+                    <li>Supported senior engineers in project planning and execution.</li>
+                    <li>Developed and optimized SQL databases for performance and integrity.</li>
+                    <li>Developed technical documentation for client deliverables.</li>
+                </ul>
+            </div>
+        </div>
+       
+    </div>
+</section>
+  <!-- Contact Section -->
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to connect, reach out via email.</p>
+    <form id="contact-form"onsubmit="clearForm()">
+        <input type="text" id="name" placeholder="Your Name" required>
+        <input type="email" id="email" placeholder="Your Email" required>
+        <textarea id="message" placeholder="Your Message" required></textarea>
+        <button type="submit">Send Message</button>
+    </form>
+</section>
+
+    </div>
+    <footer>
+        <p>&copy; 2024 Yogesh Selvam. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+    <!-- Include EmailJS SDK -->
+    <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+(function(){
+  emailjs.init({
+    publicKey: "hPx2t0--zHxq9O5rJ",
+  });
+})();
+function clearForm() {
+    // Get the form element
+    var form = document.getElementById('contact-form');
+
+    // Reset the form to clear all fields
+    form.reset();
+  }
+</script>
+
+</body>
+
+</html>
